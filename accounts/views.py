@@ -13,7 +13,7 @@ def login_view(request):
                 user = authenticate(username=username, password=password)
                 if user is not None:
                     login(request, user)
-                    return render(request, 'home.html')
+                    return render(request, 'api/home.html')
         else:
             return render(request, 'accounts/login.html', {'form': form})
     else:
@@ -31,3 +31,6 @@ def register_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'accounts/register.html', {'form': form})
+
+def logout_view(request):
+    return render(request, 'accounts/logout.html')
