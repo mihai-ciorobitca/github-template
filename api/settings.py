@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ww4kr7k5z&j7bp@2*r%u&^u9b(v$8od82h%h+bnztco&f5@4&&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 
 # Application definition
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'github_template.urls'
+ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'github_template.wsgi.application'
+WSGI_APPLICATION = 'api.wsgi.application'
 
 
 # Database
